@@ -868,4 +868,104 @@ The sine of       6.00 = -0.279415         *
 2.	y = cos(x)
 3.	y = tan(x)
 ```
-	
+
+
+ข้อ1
+
+Code
+```
+using System;
+
+namespace lab7
+{
+    class Class5
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(i*i) + "*", i,i*i);
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', ((int)(val)) + 10);
+            return SpaceString;
+        }
+    }
+}
+```
+
+ผลการทดลอง
+
+![](https://github.com/NAPHARAT/LAB-07/blob/master/%E0%B8%82%E0%B9%89%E0%B8%AD1.JPG)
+
+
+ข้อ2
+
+Code
+```
+using System;
+
+namespace lab7
+{
+    class Class5
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', ((int)(val*10.0)) + 10);
+            return SpaceString;
+        }
+    }
+}
+
+```
+
+
+ผลการทดลอง
+
+![](https://github.com/NAPHARAT/LAB-07/blob/master/%E0%B8%82%E0%B9%89%E0%B8%AD2.JPG)
+
+
+
+ข้อ3
+
+Code
+
+```
+using System;
+
+namespace lab7
+{
+    class Class5
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Tan(i)) + "*", i, Math.Tan(i));
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', ((int)(val)) + 20);
+            return SpaceString;
+        }
+    }
+}
+```
+
+
+ผลการทดลอง
+
+![](https://github.com/NAPHARAT/LAB-07/blob/master/%E0%B8%82%E0%B9%89%E0%B8%AD3.JPG)
