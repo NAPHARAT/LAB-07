@@ -1,5 +1,6 @@
 #ใบงานที่ 7
-##เรื่อง  พื้นฐานภาษา C#
+##เรื่อง  พื้นฐานภาษา C
+##นางสาวนภารัตน์ ฐิติกรโกวิท 57030180
 ##วัตถุประสงค์
 1). เพื่อให้นักศึกษาสามารถใช้งานภาษา C# ขั้นพื้นฐานได้
 ##ลำดับขั้นการทดลอง
@@ -12,14 +13,14 @@ xxx	|ใช้ได้	|ไม่มีตัวอักษรที่ละ�
 null	|ใช้ไม่ได้	|เป็นคำสงวนในภาษา C#
 _value	| ได้ |	
 First-name | ใช่ไม่ได้| มีเครื่องหมายทางคณิตศาสตร์อยู่ในชื่อ			
-Hello!	| |	
-w*h 	| |			
-time	| |			
-do	| |			
-Do	| |			
-21November	| |			
-ladkrabang	| |			
-Student ID	| |			
+Hello!	|ใช้ไม่ได้ | มีเครื่องหมาย!อยู่ในชื่อ
+w*h 	|ใช้ไม่ได้|มีเครื่องหมายทางคณิตศาสตร์อยู่ในชื่อ		
+time	|ใช้ได้ |		
+do	|ใช้ไม่ได้|เป็นคำเฉพาะของ C#			
+Do	|ใช้ได้|			
+21November	|ใช้ไม่ได้ |ห้ามมีตัวเลขอยู่หน้าตัวอักษร			
+ladkrabang	|ใช้ได้ |			
+Student ID	| ใช้ไม่ได้|ระหว่างตัวอักษรห้ามมีเว้นวรรค			
 
 ##2). ชนิดข้อมูลภายในภาษา C# 
   2.1).	Property ของชนิดข้อมูล
@@ -57,6 +58,171 @@ Maximum Value :2147483647
 คำสั่งสำหรับการทดลอง
 ให้นักศึกษา เขียนโปรแกรมคล้ายกับตัวอย่างที่ 1 โดยมีชนิดข้อมูลเป็น byte, char, bool, sbyte, short, ushort, uint, float, double, decimal, long และ ulong
 
+
+Code
+```
+using System;
+
+
+namespace lab7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Data type : byte");
+            Console.WriteLine("Size :" + sizeof(byte));
+            Console.WriteLine("Minimum Value :" + byte.MinValue);
+            Console.WriteLine("Maximum Value :" + byte.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : char");
+            Console.WriteLine("Size :" + sizeof(char));
+            Console.WriteLine("Minimum Value :" + (int)char.MinValue);
+            Console.WriteLine("Maximum Value :" + (int)char.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : bool");
+            Console.WriteLine("Size :" + sizeof(bool));
+            bool a = 4 < 5;
+            bool b = 4 > 5;
+            Console.WriteLine("4 < 5 : {0}", a);
+            Console.WriteLine("4 > 5 : {0}", b);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : sbyte");
+            Console.WriteLine("Size :" + sizeof(sbyte));
+            Console.WriteLine("Minimum Value :" + sbyte.MinValue);
+            Console.WriteLine("Maximum Value :" + sbyte.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : usort");
+            Console.WriteLine("Size :" + sizeof(ushort));
+            Console.WriteLine("Minimum Value :" + ushort.MinValue);
+            Console.WriteLine("Maximum Value :" + ushort.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : int");
+            Console.WriteLine("Size :" + sizeof(int));
+            Console.WriteLine("Minimum Value :" + int.MinValue);
+            Console.WriteLine("Maximum Value :" + int.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : uint");
+            Console.WriteLine("Size :" + sizeof(uint));
+            Console.WriteLine("Minimum Value :" + uint.MinValue);
+            Console.WriteLine("Maximum Value :" + uint.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : float");
+            Console.WriteLine("Size :" + sizeof(float));
+            Console.WriteLine("Minimum Value :" + float.MinValue);
+            Console.WriteLine("Maximum Value :" + float.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : double");
+            Console.WriteLine("Size :" + sizeof(double));
+            Console.WriteLine("Minimum Value :" + double.MinValue);
+            Console.WriteLine("Maximum Value :" + double.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : decimal");
+            Console.WriteLine("Size :" + sizeof(decimal));
+            Console.WriteLine("Minimum Value :" + decimal.MinValue);
+            Console.WriteLine("Maximum Value :" + decimal.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : long");
+            Console.WriteLine("Size :" + sizeof(long));
+            Console.WriteLine("Minimum Value :" + long.MinValue);
+            Console.WriteLine("Maximum Value :" + long.MaxValue);
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Data type : ulong");
+            Console.WriteLine("Size :" + sizeof(ulong));
+            Console.WriteLine("Minimum Value :" + ulong.MinValue);
+            Console.WriteLine("Maximum Value :" + ulong.MaxValue);
+        }
+    }
+}
+
+```
+
+ผลการทดลอง
+
+```
+Data type : byte
+Size :1
+Minimum Value :0
+Maximum Value :255
+
+
+
+Data type : char
+Size :2
+Minimum Value :0
+Maximum Value :65535
+
+
+
+Data type : bool
+Size :1
+4 < 5 : True
+4 > 5 : False
+
+
+
+Data type : sbyte
+Size :1
+Minimum Value :-128
+Maximum Value :127
+
+
+
+Data type : usort
+Size :2
+Minimum Value :0
+Maximum Value :65535
+
+
+
+Data type : int
+Size :4
+Minimum Value :-2147483648
+Maximum Value :2147483647
+
+
+
+Data type : uint
+Size :4
+Minimum Value :0
+Maximum Value :4294967295
+
+
+
+Data type : float
+Size :4
+Minimum Value :-3.402823E+38
+Maximum Value :3.402823E+38
+
+
+
+Data type : double
+Size :8
+Minimum Value :-1.79769313486232E+308
+Maximum Value :1.79769313486232E+308
+
+
+
+Data type : decimal
+Size :16
+Minimum Value :-79228162514264337593543950335
+Maximum Value :79228162514264337593543950335
+
+
+
+Data type : long
+Size :8
+Minimum Value :-9223372036854775808
+Maximum Value :9223372036854775807
+
+
+
+Data type : ulong
+Size :8
+Minimum Value :0
+Maximum Value :18446744073709551615
+
+```
 **หมายเหตุ**
  
 ชนิดข้อมูล ```bool``` เก็บข้อมูลได้เฉพาะ ```true``` และ ```false``` ไม่ต้องหา ```MinValue``` และ ```MaxValue```
@@ -111,14 +277,36 @@ namespace RandomNumber
 
 ให้เขียนโปรแกรมโดยมีข้อกำหนดดังนี้
 
-1. สร้างตัวแปร Random โดยการมีสุ่มเลข 1 หลัก (0 – 9 )
 
-1. สร้างตัวแปรชนิด integer สำหรับรับค่าจากผู้ใช้
+Code
+```
+using System;
 
-1. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
 
-1. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
+namespace lab7
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomnumber = random.Next(0, 9);
+            Console.WriteLine("Auto Random Number (0-9) : " + randomnumber);
+            int a = randomnumber;
+            Console.Write("Please Enter number(0-9) : ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            bool c = a > b;
+            Console.WriteLine(" {0} > {1} ", a, b);
+            Console.WriteLine("Boolean : " + c);
+        }
+    }
+}
 
+```
+
+ผลการทดลอง
+
+![](https://github.com/NAPHARAT/LAB-07/blob/master/1.JPG)
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
 
@@ -210,8 +398,205 @@ namespace thruthTable
 5. NOR
 6. Exclusive OR
 ```
+Code
+```
+using System;
+
+namespace Lab7._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool A, B, Y;
+            Console.WriteLine("      Y = A AND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+
+            Console.WriteLine("      Y = A OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+
+            Console.WriteLine("      Y = NOT A");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+
+            Console.WriteLine("      Y = A NAND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+
+            Console.WriteLine("      Y = A NOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+
+            Console.WriteLine("      Y = A XOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("\n=======================\n");
+        }
+    }
+}
 
 
+
+```
+
+ผลการทดลอง
+
+```
+
+  Y = A AND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | False
+ True   False   | False
+ True   True    | True
+-----------------------
+
+
+***********************
+
+
+      Y = A OR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | True
+ True   False   | True
+ True   True    | True
+-----------------------
+
+
+***********************
+
+
+      Y = NOT A
+-----------------------
+   A    |  Y
+-----------------------
+ False  | True
+ True   | False
+-----------------------
+
+
+***********************
+
+
+      Y = A NAND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | True
+ True   False   | True
+ True   True    | False
+-----------------------
+
+
+***********************
+
+
+      Y = A NOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | False
+ True   False   | False
+ True   True    | False
+-----------------------
+
+
+***********************
+
+
+      Y = A XOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | True
+ True   False   | True
+ True   True    | False
+-----------------------
+
+
+***********************
+```
 
   2.2.2.	ชนิดข้อมูลตัวเลขจำนวนเต็ม (Integer Types)
 ข้อมูลชนิดตัวเลข สามารถนำไปใช้งานได้หลากหลาย เช่น การนับหรือแสดงจำนวน การกำหนดลำดับที่ การจัดลำดับ เป็นต้น ค่าที่ใส่ลงในตัวแปร เป็นได้ทั้งค่าบวก ค่าศูนย์ และค่าลบ (มีตัวแปรบางชนิดที่เก็บเฉพาะค่าบวกเพียงอย่างเดียว) การกำหนดค่าใดๆ ให้กับตัวแปร ทำได้โดยการใช้เครื่องหมาย =
@@ -252,6 +637,49 @@ public class intergerTest
 9.	y%8
 10.	100*x+y%2-a
 ```
+
+Code
+
+```
+using System;
+namespace lab7
+{
+    class Class3
+    {
+        static void Main(string[] args)
+        {
+            Double a = 10, b = 20, x = 5, y = 2;
+
+            Console.WriteLine("a = 10, b = 20, x = 5, y = 2");
+            Console.WriteLine("..............................\n");
+            Console.Write("1. a + b = {0} + {1}", a, b);
+            Console.WriteLine("\n         = {0}\n", a + b);
+            Console.Write("2. x - b = {0} - {1}", x, b);
+            Console.WriteLine("\n         = {0}\n", x - b);
+            Console.Write("3. x * b = {0} * {1}", x, b);
+            Console.WriteLine("\n         = {0}\n", x * b);
+            Console.Write("4. y / a = {0} / {1}", y, a);
+            Console.WriteLine("\n         = {0}\n", y / a);
+            Console.Write("5. b % y = {0} % {1}", b, y);
+            Console.WriteLine("\n         = {0}\n", b % y);
+            Console.Write("6. y + 10%x = {0} + 10 % {1}", y, x);
+            Console.WriteLine("\n            = {0}\n", y + 10 % x);
+            Console.Write("7. a/3*5 = {0} / 3 * 5", a);
+            Console.WriteLine("\n         = {0}\n", a / 3*5);
+            Console.Write("8. 9/2*a = 9 / 2 * {0} ",a);
+            Console.WriteLine("\n         = {0}\n", 9 / 2 * a);
+            Console.Write("9. y%8   = {0} % 8 ", y);
+            Console.WriteLine("\n         = {0}\n", y % 8 );
+            Console.Write("10. 100*x+y%2-a = 100 * {0} + {1} % 2 - {2} ", x,y,a);
+            Console.WriteLine("\n                = {0}\n", 100*x+y%2-a);
+        }
+    }
+}
+```
+
+ผลการทดลอง
+
+![](https://github.com/NAPHARAT/LAB-07/blob/master/2.JPG)
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
 
